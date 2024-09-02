@@ -1,30 +1,33 @@
-end = 0
-calc_type = 0
+end = 0 
+veri = 0
+area_veri = 0
 
-while True:
-    print("\nOlá bem vindo a Calculadora, oque deseja fazer? \n")
+
+while True: 
+    print("O que voçê deseja fazer? \n")
     print("1-Calcular")
     print("2-Sair")
-    end = (int(input()))
+    veri = (int(input()))
     
-    if end == 2:
+    if veri == 2:
         break
-
-    if end == 1:
-        n1 = (int(input("Qual o primeiro número do cálculo?")))
-        print("Qual opereção deseja fazer?\n")
-
-        print("\n1-Adicão")
-        print("2-Subtração")
-        print("3-Multiplicação")
-        print("4-Divisão")
-        print("5-Potenciação")
-        calc_type = (int(input()))
-
-        if calc_type == 1:
-            n2 = (int(input("Qual o segundo número do cálculo")))
-            soma = n1 + n2
-            print(n1, "+" ,n2, "=", soma)
+    
+    if veri == 1:
+        print("Qual aréa voçê deseja trabalhar \n")
         
-     
-print("abroba")
+        print("1-Geometria")
+        print("2-Física")
+        
+        if area_veri == 2:
+            print("Qual figura você deseja usar \n")
+            
+            print("1-Retângulo")
+            print("2-Triângulo")
+            print("3-Círculo")
+            (int(input()))
+            
+            if area_veri == 1:
+                lado1 = (float(input("Qual o valor do 1° lado")))
+                lado2 = (float(input("Qual o valor  do 2° lado")))
+           
+            
