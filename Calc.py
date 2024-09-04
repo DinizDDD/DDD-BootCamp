@@ -57,31 +57,19 @@ def geometria():
             l1 = (float(input("Qual o valor da base do triângulo? ")))
             l2 = (float(input("Qual o valor  da altura do triângulo? ")))
             hpt = (float(input("Qual o valor da hipotenusa do triângulo? (Obs: caso não saiba a hipotenusa digite 0\n ")))
-            hpt = (float(input()))
             
             if hpt == 0:
                 elv_t = (l1** 2) + (l2** 2)
                 hpt = math.sqrt(elv_t)
             
-                area_tr = (l1 * l2) / 2
-                peri_tr = (l1 + l2 + hpt) / 2
-        
-                print(f"O valor da aréa é {area_tr}")
-                print(f"O valor do perímetro é {peri_tr}")
-                if hpt == 0:
-                    print(f"E a hipotenusa é {hpt:.2f}")
-            
-                separ()
-            
-            else:
-                 area_tr = (l1 * l2) / 2
+            area_tr = (l1 * l2) / 2
             peri_tr = (l1 + l2 + hpt) / 2
-            
+        
             print(f"O valor da aréa é {area_tr}")
-            print(f"O valor do perímetro é {peri_tr}")
+            print(f"O valor do perímetro é {peri_tr:.2f}")
             if hpt == 0:
                 print(f"E a hipotenusa é {hpt:.2f}")
-                
+            
             separ()
             
 
@@ -223,8 +211,4 @@ while True:
 
         if area_veri == 2:
             fisica()             
-                    
-                    
-                
-                
-                
+                         
