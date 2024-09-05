@@ -1,6 +1,9 @@
 
 import math
 
+with open("historico.txt", "w") as arq:
+    pass
+
 def separ():     
     print("=============================================")
 
@@ -13,7 +16,9 @@ def geometria():
     print("2-Triângulo")
     print("3-Círculo")
     pol_veri = (int(input()))
-
+    
+    
+  
     separ()
 
 
@@ -34,6 +39,11 @@ def geometria():
         print(f"O perímetro é {peri_r}")
         print(f"A diagonal é {diag:.2f} \n")
         
+        with open("historico.txt", "a") as arq:
+            arq.write(f"\n{l1} * {l2} = {area_r}")
+            arq.write(f"\n{l1} + {l1} + {l2} + {l2} = {peri_r}")
+            arq.write(f"\nx^2 = {l1}^2 + {l2}^2 \n x^2 = {l1**2} + {l2**2} \n x^2 = {elv} \n RAIZ_{elv} = {diag} \n ")
+                    
         separ()
 
         
@@ -69,6 +79,11 @@ def geometria():
             print(f"O valor do perímetro é {peri_tr:.2f}")
             if hpt == 0:
                 print(f"E a hipotenusa é {hpt:.2f}")
+                
+            with open("historico.txt", "a") as arq:
+                arq.write(f"\n{l1} * {l2} / 2 = {area_tr}")
+                arq.write(f"\n{l1} + {l2} + {hpt} = {peri_tr}")
+                arq.write(f"\nx^2 = {l1}^2 + {l2}^2 \n x^2 = {l1**2} + {l2**2} \n x^2 = {elv_t} \n RAIZ_{elv_t} = {hpt} \n")
             
             separ()
             
@@ -87,6 +102,11 @@ def geometria():
             print(f"\nA aréa desse triângulo é {area_te:.2f}")
             print(f"O perímetro é {peri_te}")
             print(f"E a altura(h) é {alt_te:.2f}")
+            
+            with open("historico.txt", "a") as arq:
+                arq.write(f"\n{l1}^2 * RAIZ_3 / 4 = {area_te}")
+                arq.write(f"\n{l1} + {l1} + {l1} = {peri_te}")
+                arq.write(f"\n{l1} * RAIZ_3 / 2 = {alt_te} \n")
             
             separ()
 
@@ -117,6 +137,11 @@ def geometria():
             print(f"O raio do círculo é {raio}")
             print(f"O comprimento do círculo é {compri:.2f}")
             print(f"A aréa do círculo é {area_c:.2f}")
+            
+            with open("historico.txt", "a") as arq:
+                arq.write(f"\n{diam} / 2 = {raio}")
+                arq.write(f"\n2 * PI * {raio} = {compri}")
+                arq.write(f"\nPI * {raio}^2 = {area_c} \n")
 
             print(separ())
 
@@ -133,6 +158,11 @@ def geometria():
             print(f"O diâmetro do círculo é {diam}")
             print(f"O comprimento do círculo é {compri:.2f}")
             print(f"A aréa do círculo é {area_c:.2f}")
+
+            with open("historico.txt", "a") as arq:
+                arq.write(f"\n{raio} * 2 = {diam}")
+                arq.write(f"\n2 * PI * {raio} = {compri}")
+                arq.write(f"\nPI * {raio}^2 = {area_c} \n")          
 
             separ()
 
@@ -157,6 +187,9 @@ def fisica():
         
         print(f"\nA velocidade Média é {vm}")
         
+        with open("historico.txt", "a") as arq:
+                arq.write(f"\n{s} - {s0} / {t} - {t0} = {vm} \n")
+                       
         separ()
         
     if fis_veri == 2:
@@ -175,6 +208,9 @@ def fisica():
         
         print(f"\nA aceleração média é {a}")
         
+        with open("historico.txt", "a") as arq:
+                arq.write(f"\n{v} - {v0} / {t} - {t0} = {a} \n")
+        
         separ()
         
 
@@ -185,15 +221,20 @@ while True:
     print("O que você deseja fazer? \n")
     print("1-Calcular")
     print("2-Sair")
+    print("3-Ver histórico")
     veri = (int(input()))
     
     separ()
-
     
+    
+    if veri == 3:
+        with open("historico.txt") as file:
+            content = file.read()
+            print(content)
+
     if veri == 2:
         break
 
-    
     if veri == 1: 
         separ()
         area_veri = 0
@@ -210,5 +251,6 @@ while True:
             geometria()   
 
         if area_veri == 2:
-            fisica()             
-                         
+            fisica()       
+            
+                                      
