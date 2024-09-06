@@ -17,7 +17,6 @@ def geometria():
     print("3-Círculo")
     pol_veri = (int(input()))
     
-    
   
     separ()
 
@@ -34,6 +33,9 @@ def geometria():
         peri_r = (l1 * 2) + (l2 * 2)
         elv = (l1** 2) + (l2 ** 2)
         diag = math.sqrt(elv)
+        
+        if area_r < 0 or peri_r < 0 or diag < 0:
+            print("Não é possível ter uma altura ou comprimento menor que zero")
         
         print(f"\nA aréa desse retângulo é {area_r}")
         print(f"O perímetro é {peri_r}")
@@ -74,6 +76,9 @@ def geometria():
             
             area_tr = (l1 * l2) / 2
             peri_tr = (l1 + l2 + hpt) / 2
+            
+            if area_tr < 0 or peri_tr < 0 or hpt < 0:
+                print("Não é possível ter uma altura ou comprimento menor que zero")
         
             print(f"O valor da aréa é {area_tr}")
             print(f"O valor do perímetro é {peri_tr:.2f}")
@@ -98,6 +103,9 @@ def geometria():
             area_te = ((l1** 2) * (math.sqrt(3))) / 4
             peri_te = l1 * 3
             alt_te = (l1 * (math.sqrt(3))) / 2
+            
+            if area_te < 0 or peri_te < 0 or alt_te < 0:
+                print("Não é possível ter uma altura ou comprimento menor que zero")
 
             print(f"\nA aréa desse triângulo é {area_te:.2f}")
             print(f"O perímetro é {peri_te}")
@@ -133,6 +141,9 @@ def geometria():
             compri = (2 * math.pi) * raio
             area_c = math.pi * (raio** 2)
             
+            if raio < 0 or compri < 0 or area_c < 0:
+                print("Não é possível ter uma altura ou comprimento menor que zero")
+            
             
             print(f"O raio do círculo é {raio}")
             print(f"O comprimento do círculo é {compri:.2f}")
@@ -154,6 +165,9 @@ def geometria():
             diam = raio * 2
             compri = (2 * math.pi) * raio
             area_c = math.pi * (raio** 2)
+            
+            if diam < 0 or compri < 0 or area_c < 0:
+                print("Não é possível ter uma altura ou comprimento menor que zero")
 
             print(f"O diâmetro do círculo é {diam}")
             print(f"O comprimento do círculo é {compri:.2f}")
