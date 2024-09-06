@@ -33,10 +33,11 @@ def geometria():
         peri_r = (l1 * 2) + (l2 * 2)
         elv = (l1** 2) + (l2 ** 2)
         diag = math.sqrt(elv)
-        
-        if area_r < 0 or peri_r < 0 or diag < 0:
-            print("Não é possível ter uma altura ou comprimento menor que zero")
-        
+
+        if peri_r < 0 or area_r < 0 or diag < 0:
+            print("Não pode haver comprimento ou tamanho negativo \n")
+
+
         print(f"\nA aréa desse retângulo é {area_r}")
         print(f"O perímetro é {peri_r}")
         print(f"A diagonal é {diag:.2f} \n")
@@ -70,19 +71,18 @@ def geometria():
             l2 = (float(input("Qual o valor  da altura do triângulo? ")))
             hpt = (float(input("Qual o valor da hipotenusa do triângulo? (Obs: caso não saiba a hipotenusa digite 0\n ")))
             
-            if hpt == 0:
-                elv_t = (l1** 2) + (l2** 2)
-                hpt = math.sqrt(elv_t)
-            
             area_tr = (l1 * l2) / 2
             peri_tr = (l1 + l2 + hpt) / 2
-            
-            if area_tr < 0 or peri_tr < 0 or hpt < 0:
-                print("Não é possível ter uma altura ou comprimento menor que zero")
+
+            if peri_tr < 0 or area_tr < 0 or hpt < 0:
+                print("Não pode haver comprimento ou tamanho negativo \n")
         
             print(f"O valor da aréa é {area_tr}")
             print(f"O valor do perímetro é {peri_tr:.2f}")
             if hpt == 0:
+                elv_t = (l1** 2) + (l2** 2)
+                hpt = math.sqrt(elv_t)
+
                 print(f"E a hipotenusa é {hpt:.2f}")
                 
             with open("historico.txt", "a") as arq:
@@ -106,6 +106,9 @@ def geometria():
             
             if area_te < 0 or peri_te < 0 or alt_te < 0:
                 print("Não é possível ter uma altura ou comprimento menor que zero")
+
+            if peri_te < 0 or area_te < 0 or alt_te < 0:
+                print("Não pode haver comprimento ou tamanho negativo \n")
 
             print(f"\nA aréa desse triângulo é {area_te:.2f}")
             print(f"O perímetro é {peri_te}")
@@ -140,12 +143,15 @@ def geometria():
             raio = diam / 2
             compri = (2 * math.pi) * raio
             area_c = math.pi * (raio** 2)
+
+            if raio < 0 or compri < 0 or area_c < 0:
+                print("Não pode haver comprimento ou tamanho negativo \n")
             
             if raio < 0 or compri < 0 or area_c < 0:
                 print("Não é possível ter uma altura ou comprimento menor que zero")
             
             
-            print(f"O raio do círculo é {raio}")
+            print(f"\nO raio do círculo é {raio}")
             print(f"O comprimento do círculo é {compri:.2f}")
             print(f"A aréa do círculo é {area_c:.2f}")
             
@@ -154,9 +160,8 @@ def geometria():
                 arq.write(f"\n2 * PI * {raio} = {compri}")
                 arq.write(f"\nPI * {raio}^2 = {area_c} \n")
 
-            print(separ())
-
-
+            separ()
+ 
         if cir_veri == 2:
             separ()
 
@@ -169,7 +174,10 @@ def geometria():
             if diam < 0 or compri < 0 or area_c < 0:
                 print("Não é possível ter uma altura ou comprimento menor que zero")
 
-            print(f"O diâmetro do círculo é {diam}")
+            if diam < 0 or compri < 0 or area_c < 0:
+                print("Não pode haver comprimento ou tamanho negativo \n")
+
+            print(f"\nO diâmetro do círculo é {diam}")
             print(f"O comprimento do círculo é {compri:.2f}")
             print(f"A aréa do círculo é {area_c:.2f}")
 
@@ -265,6 +273,4 @@ while True:
             geometria()   
 
         if area_veri == 2:
-            fisica()       
-            
-                                      
+            fisica()                                         
