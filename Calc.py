@@ -1,3 +1,6 @@
+#eu teria gostado muito de fazer uma interface melhor assim como em uma calculadora de celular mas não sei mexer com essa parte
+
+#mesmo o código funcionando ele ficou com muitas perguntas
 
 import math
 
@@ -23,6 +26,8 @@ def geometria():
 
     if pol_veri == 1:
         separ()
+    
+        #como eu gostaria de o usuário escolher oq iria ver acabei mostrando tudo que ele verá
         
         print("Será possível calcular: aréa, perímetro e diagonal desse retângulo\n")
         
@@ -37,6 +42,7 @@ def geometria():
         if peri_r < 0 or area_r < 0 or diag < 0:
             print("Não pode haver comprimento ou tamanho negativo \n")
 
+        #Eu teria preferido que o usuário escolhesse o que ver, mas como eu já reclamei tem muitas perguntas
 
         print(f"\nA aréa desse retângulo é {area_r}")
         print(f"O perímetro é {peri_r}")
@@ -189,6 +195,8 @@ def geometria():
             separ()
 
 def fisica():
+    #A parte de fisíca ficou bem cru até porque eu não sei muito de fisíca, eu tentei apreder mas...
+
     print("O que você deseja calcular?\n ") 
     print("1-Velocidade Média ")
     print("2-Aceleração Média ")
