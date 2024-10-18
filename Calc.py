@@ -20,13 +20,7 @@ def geometria():
     print("3-Círculo")
     pol_veri = (int(input()))
     
-<<<<<<< Updated upstream
-  
-=======
-    
->>>>>>> Stashed changes
     separ()
-
 
     if pol_veri == 1:
         separ()
@@ -58,6 +52,7 @@ def geometria():
             arq.write(f"\nx^2 = {l1}^2 + {l2}^2 \n x^2 = {l1**2} + {l2**2} \n x^2 = {elv} \n RAIZ_{elv} = {diag} \n ")
                     
         separ()
+
 
         
     if pol_veri == 2:
@@ -284,7 +279,7 @@ while True:
 
         
         if area_veri == 1:
-            geometria()   
+            geometria()
 
         if area_veri == 2:
-            fisica()                                         
+            fisica()
