@@ -20,7 +20,11 @@ def geometria():
     print("3-Círculo")
     pol_veri = (int(input()))
     
+<<<<<<< Updated upstream
   
+=======
+    
+>>>>>>> Stashed changes
     separ()
 
 
@@ -167,6 +171,7 @@ def geometria():
                 arq.write(f"\nPI * {raio}^2 = {area_c} \n")
 
             separ()
+
  
         if cir_veri == 2:
             separ()
@@ -193,6 +198,7 @@ def geometria():
                 arq.write(f"\nPI * {raio}^2 = {area_c} \n")          
 
             separ()
+            
 
 def fisica():
     #A parte de fisíca ficou bem cru até porque eu não sei muito de fisíca, eu tentei apreder mas...
